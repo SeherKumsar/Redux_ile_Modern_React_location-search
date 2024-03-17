@@ -1,5 +1,6 @@
 import type { Place } from "../api/Place";
 import { useState } from "react";
+import { search } from "../api/search";
 
 interface LocationSearchProps {
   onPlaceClick: (place: Place) => void;
@@ -7,13 +8,12 @@ interface LocationSearchProps {
 
 export default function LocationSearch({ onPlaceClick }: LocationSearchProps) {
   const [term, setTerm] = useState("");
-  // never[] should be Place[]
   const [places, setPlaces] = useState<Place[]>([]);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    console.log("Need to search api...", term)
+    await search(term);
   };
 
   return (
