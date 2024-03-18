@@ -8,9 +8,7 @@ function App() {
 
   return (
     <div className="h-screen w-screen grid grid-cols-12">
-      {place?.name}
       <div className="col-span-3 p-2">
-        {/* (p: Place) */}
         <LocationSearch onPlaceClick={(p) => setPlace(p)} />
       </div>
       <div className="col-span-9">
