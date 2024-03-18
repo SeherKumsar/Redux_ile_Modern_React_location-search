@@ -3,13 +3,13 @@ import { useState, Fragment } from "react";
 import { search } from "../api/search";
 
 interface LocationSearchProps {
-//   onPlaceClick: (place: Place) => void;
-  onPlaceClick: (place: {
-    id: number;
-    name: string;
-    longitude: number;
-    latitude: number;
-  }) => void;
+  onPlaceClick: (place: Place) => void;
+//   onPlaceClick: (place: {
+//     id: number;
+//     name: string;
+//     longitude: number;
+//     latitude: number;
+//   }) => void;
 }
 
 export default function LocationSearch({ onPlaceClick }: LocationSearchProps) {
